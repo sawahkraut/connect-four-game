@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    background-color: #fcfcfa;
+}
+.container {
+    position: relative;
+}
+.slot {
+    width: 100px;
+    height: 100px;
+    background: #a5c3cf; /* 7aa3e2 a5c3cf */
+
+    padding: 10px;
+}
+.hole {
+    width: 80px;
+    height: 80px;
+    background: #fcfcfa;
+    border-radius: 50%;
+}
+.slot.player1 .hole {
+    background: #ffbebd;
+}
+.slot.player2 .hole {
+    background: #1a405f;
+}
+#board {
+    display: flex;
+    position: absolute;
+    transform: translateX(-50%); /* affects object */
+    left: 50%; /* affects relationship to parent */
+    margin-top: 120px;
+    cursor: pointer;
+}
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #16253d;
+    opacity: 0.9;
+    position: absolute;
+    top: 320px;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    z-index: 999;
+    display: none;
+}
+#button {
+    font-size: 30px;
+    font-family: "Helvetica Neue";
+    /* background-color: #efb509; */
+    padding: 10px;
+    /* border: 1px solid #16253d; */
+}
+#button a {
+    text-decoration: none;
+    /* color: #efb509; */
+}
+#button a:visited {
+    text-decoration: none;
+    /* color: #efb509; */
+}
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+}
+.overlay.on {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition-property: all;
+    transition-duration: 1s;
+}
+#scores {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+#player1Score,
+#player2Score {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    border: 1px solid #16253d;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    line-height: 50px; /* HACKY TRICK: only works with one line text in div. Set it the same as height */
+}
+
+.semi {
+    opacity: 0.5;
+}
