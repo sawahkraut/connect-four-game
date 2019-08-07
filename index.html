@@ -4,17 +4,33 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
 
         <title>Connect Four</title>
     </head>
     <body>
         <div class="container">
+            <div id="heading">-- CONNECT FOUR ONLINE --</div>
             <div id="scores">
+                <h1 id="player1Title">Your Pink Player</h1>
                 <div id="player1Score"></div>
+                <h1 id="player2Title">Regal Blue Player</h1>
                 <div id="player2Score"></div>
-                <button type="button" name="resetScore" id="resetScore">
-                    Reset Score
-                </button>
+                <div>
+                    <button
+                        type="button"
+                        name="resetScore"
+                        id="resetScore"
+                        class="btn btn-dark"
+                    >
+                        Reset Score
+                    </button>
+                </div>
             </div>
 
             <div id="board">
@@ -79,8 +95,11 @@
 
         <div class="overlay"></div>
         <div class="popup">
-            <button id="button">
-                <a href="#" onclick="location.reload()">Reload Game</a>
+            <div>
+                <div class="playagain">Would you like to play again?</div>
+            </div>
+            <button id="button" type="button" class="btn btn-dark btn-lg">
+                <a href="#" onclick="location.reload()">New Game</a>
             </button>
         </div>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>

@@ -2,8 +2,11 @@
     box-sizing: border-box;
     background-color: #fcfcfa;
 }
+
 .container {
+    display: flex;
     position: relative;
+    height: 100%;
 }
 .slot {
     width: 100px;
@@ -24,42 +27,48 @@
 .slot.player2 .hole {
     background: #1a405f;
 }
+#heading {
+    font-family: "Helvetica Neue";
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 2rem;
+}
 #board {
     display: flex;
     position: absolute;
     transform: translateX(-50%); /* affects object */
     left: 50%; /* affects relationship to parent */
-    margin-top: 120px;
+    margin-top: 6rem;
     cursor: pointer;
+    /* padding-top: 3rem; */
 }
 .popup {
-    display: flex;
     justify-content: center;
     align-items: center;
-    background: #16253d;
-    opacity: 0.9;
+    background: #fcfcfa;
+
     position: absolute;
-    top: 320px;
-    left: 0;
-    width: 100%;
-    height: 300px;
+    top: 30%;
+    left: 30%;
+    width: 35rem;
+    height: 10rem;
     z-index: 999;
     display: none;
 }
-#button {
-    font-size: 30px;
-    font-family: "Helvetica Neue";
-    /* background-color: #efb509; */
-    padding: 10px;
-    /* border: 1px solid #16253d; */
-}
-#button a {
-    text-decoration: none;
-    /* color: #efb509; */
-}
 #button a:visited {
     text-decoration: none;
-    /* color: #efb509; */
+    color: inherit;
+}
+.playagain {
+    padding-right: 2rem;
+    font-family: "Helvetica Neue";
+    font-size: 30px;
+    font-weight: 200;
 }
 .overlay {
     width: 100vw;
@@ -77,20 +86,44 @@
     transition-duration: 1s;
 }
 #scores {
-    width: 50%;
-    margin: 0 auto;
+    position: absolute;
+    transform: translateX(-50%); /* affects object */
+    left: 10%; /* affects relationship to parent */
+    top: 10rem;
+    width: 20%;
+    /* margin: 0 auto; */
+    padding-top: 2rem;
+    padding-right: 4rem;
     text-align: center;
+}
+#player1Title {
+    color: #ffbebd;
+}
+#player2Title {
+    color: #1a405f;
+}
+#player1Title,
+#player2Title {
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+    font-size: 25px;
 }
 #player1Score,
 #player2Score {
     font-family: Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    border: 1px solid #16253d;
+    font-weight: 200;
+    font-size: 23px;
+    border: 1px solid #b3b3b3;
+    color: #333333;
     height: 50px;
     width: 50px;
     display: inline-block;
     line-height: 50px; /* HACKY TRICK: only works with one line text in div. Set it the same as height */
+    margin-bottom: 1rem;
+}
+#resetScore {
+    margin-top: 1rem;
 }
 
 .semi {
